@@ -15,7 +15,8 @@ def main(request):
             phone_number = form.cleaned_data['phone_number']
             client = Client.objects.create(name=name, phone_number=phone_number)
             client.save()
-            bot.send_message(chat_id=366321052, text="saved")
+            bot.send_message(chat_id=366321052, 
+                text=f"Mijoz ismi: {client.name}\nTelefon raqami: {client.phone_number}\nBuyurtma vaqti: {client.request_time}")
             
         else:
             error_message = "Insert correct type of phone number"

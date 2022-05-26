@@ -27,7 +27,7 @@ BOT_API_KEY = "5351634212:AAE0vkBX2kC4pE45MobkW43y0iD6SxTzTQE"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True 
-
+CSRF_TRUSTED_ORIGINS = ["*"]
 ALLOWED_HOSTS = ["https://trimmer-shopping.herokuapp.com", "*"]
 
 

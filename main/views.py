@@ -20,7 +20,7 @@ def main(request):
             
         else:
             error_message = "Insert correct type of phone number"
-
+        return render(request, "main/index.html", context={"form":UserInfoForm})
     return render(request, "main/index.html", context={"form":UserInfoForm})
 
 # bot.in

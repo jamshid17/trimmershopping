@@ -26,9 +26,9 @@ BOT_API_KEY = "5351634212:AAE0vkBX2kC4pE45MobkW43y0iD6SxTzTQE"
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True 
 
-ALLOWED_HOSTS = ["https://trimmer-shopping.herokuapp.com"]
+ALLOWED_HOSTS = ["https://trimmer-shopping.herokuapp.com", "*"]
 
 
 # Application definition

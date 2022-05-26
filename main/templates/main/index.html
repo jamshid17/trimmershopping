@@ -123,7 +123,7 @@
         </h2>
         <br>
         <div class="form">
-            <form action="{% url 'main' %}" method="post">
+            <form method="POST">
                 {% csrf_token %}
                 {{ form }}
                 <button class="button" type="submit">Buyurtma</button>

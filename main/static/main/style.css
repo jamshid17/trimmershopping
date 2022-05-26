@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #E5CFA4;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1e1e19;
+  height: 30px;
+  border-radius: 50px;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+body .scroll-top {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: #E5CFA4;
+  bottom: 10px;
+  right: 5px;
+  border-radius: 10px;
+}
+
+body .scroll-top i {
+  margin-left: 6px;
+  color: black;
+}
+
+.container {
+  width: 100vw;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #e5cfa4;
+  position: fixed;
+  z-index: 999;
+}
+
+nav .languages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80px;
+}
+
+nav .languages .uzbek img {
+  width: 30px;
+}
+
+nav .languages .russian {
+  width: 30px;
+}
+
+nav .languages .russian img {
+  width: 30px;
+}
+
+nav .navbar {
+  width: 44%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav .navbar .telephone {
+  margin-right: 10px;
+  position: relative;
+}
+
+nav .navbar .telephone::after {
+  position: absolute;
+  bottom: -7px;
+  content: '';
+  width: 0%;
+  height: 3px;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+nav .navbar .telephone:hover {
+  transition: 0.2s;
+}
+
+nav .navbar .telephone:hover::after {
+  width: 100%;
+  background-color: black;
+}
+
+nav .navbar .telephone a {
+  text-decoration: none;
+  color: black;
+  transition: 0.2s;
+  font-weight: 900;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+nav .navbar .telephone a i {
+  display: inline;
+  margin-right: 5px;
+}
+
+nav .navbar .telephone a i p {
+  display: inline;
+  align-items: center;
+}
+
+nav .navbar .instagram {
+  margin-right: 10px;
+  position: relative;
+}
+
+nav .navbar .instagram::after {
+  position: absolute;
+  bottom: -7px;
+  content: '';
+  width: 0%;
+  height: 3px;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+nav .navbar .instagram:hover {
+  transition: 0.2s;
+}
+
+nav .navbar .instagram:hover::after {
+  width: 100%;
+  background-color: black;
+}
+
+nav .navbar .instagram a {
+  text-decoration: none;
+  color: black;
+  transition: 0.2s;
+  font-weight: 900;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+nav .navbar .instagram a i {
+  font-weight: 900;
+  margin-right: 5px;
+}
+
+nav .navbar .instagram a p {
+  display: inline;
+  font-family: 'Space Mono', monospace;
+  font-weight: 900;
+}
+
+nav .navbar .telegram {
+  transition: 0.2ms;
+  position: relative;
+}
+
+nav .navbar .telegram::after {
+  position: absolute;
+  bottom: -7px;
+  content: '';
+  width: 0%;
+  height: 3px;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+nav .navbar .telegram:hover {
+  transition: 0.2s;
+}
+
+nav .navbar .telegram:hover::after {
+  width: 100%;
+  background-color: black;
+}
+
+nav .navbar .telegram a {
+  text-decoration: none;
+  color: black;
+  transition: 0.2s;
+  font-weight: 900;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+nav .navbar .telegram a:hover {
+  transition: 0.2s;
+}
+
+nav .navbar .telegram a i {
+  margin-right: 5px;
+}
+
+nav .navbar .telegram a p {
+  display: inline;
+  font-family: 'Space Mono', monospace;
+  font-weight: 900;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+  background-color: black;
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+
+main .left {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .left img {
+  height: 25vh;
+}
+
+main .middle {
+  display: flex;
+  align-items: center;
+}
+
+main .middle img {
+  height: 75vh;
+}
+
+main .right {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .right img {
+  height: 25vh;
+}
+
+h2 {
+  background-color: black;
+  color: #E5CFA4;
+  text-align: center;
+  font-size: 40px;
+}
+
+.product-img {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+.product-img h2 {
+  color: #E5CFA4;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.product-img .img__product img {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.about__product {
+  background-color: black;
+  color: #FFF;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.about__product .description h3 {
+  color: #E5CFA4;
+}
+
+.form {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form form label {
+  color: #E5CFA4;
+  margin: 0 auto;
+}
+
+.form form input {
+  width: 250px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+form .button {
+  width: 300px;
+  height: 40px;
+  font-size: 18px;
+  font-family: 'Space Mono', monospace;
+  border-radius: 5px;
+  background-color: #E5CFA4;
+  font-weight: 700;
+  transition: 0.2s;
+  outline: none;
+  margin: 0 auto;
+}
+
+.form form .button:active {
+  background-color: #867a63;
+  transition: 0.2s;
+}
+
+.form form .button:hover {
+  background-color: #867a63;
+  transition: 0.2s;
+}
+
+@media screen and (max-width: 480px) {
+  nav .navbar {
+    width: 65%;
+  }
+  nav .navbar .instagram a p {
+    display: none;
+  }
+  nav .navbar .telegram a p {
+    display: none;
+  }
+  main .left img {
+    height: 15vh;
+  }
+  main .middle img {
+    height: 45vh;
+  }
+  main .right img {
+    height: 15vh;
+  }
+  .about__product {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

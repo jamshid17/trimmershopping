@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'images/clipper.png' %}">
+    <title>Hair Clipper</title>
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body onload="uzb()">
+    <div class="scroll-top">
+        <i class="fa-solid fa-angle-up fa-3x"></i>
+    </div>
+    <div class="container">
+        <nav>
+            <div class="languages">
+               <div class="uzbek" onclick="uzb()">
+                    <img src="{% static 'images/uzbekistan.png' %}" alt="uzbek languages" >
+               </div>
+               <div class="russian" onclick="rus()">
+                    <img src="{% static 'images/russia.png' %}" alt="russia">
+               </div>
+            </div>
+            <div class="navbar">
+                <div class="telephone">
+                    <a href="tel:+998991234567">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>
+                            998991234567
+                        </p>
+                    </a>
+                </div>
+                <div class="instagram">
+                    <a href="https://www.instagram.com/_javohirhasanov/">
+                        <i class="fa-brands fa-instagram"></i>
+                        <p class="instagram-p">
+                           Instagram
+                        </p>
+                    </a>
+                </div>
+                <div class="telegram">
+                    <a href="https://t.me/AvloCode">
+                        <i class="fa-brands fa-telegram"></i>
+                        <p class="telegram-p">
+                            Telegram
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <div class="left">
+                <div>
+                    <img src="{% static 'images/hair-style-1.png' %}" alt="">
+                </div>
+                <div>
+                    <img src="{% static 'images/hair-style-2.png' %}" alt="">
+                </div>
+                <div>
+                    <img src="{% static 'images/hair-style-3.png' %}" alt="">
+                </div>
+            </div>
+
+            <div class="middle">
+                <img src="{% static 'images/clipper.png' %}" alt="">
+            </div>
+
+            <div class="right">
+                <div>
+                    <img src="{% static 'images/hair-style-4.png' %}" alt="">
+                </div>
+                <div>
+                    <img src="{% static 'images/hair-style-5.png' %}" alt="">
+                </div>
+                <div>
+                    <img src="{% static 'images/hair-style-6.png' %}" alt="">
+                </div>
+            </div>
+
+        </main>
+
+        <h2 class="about-product-h2">Mahsulot haqida</h2>
+
+        <div class="product-img">
+            <div class="img__product">
+                <img src="{% static 'images/clippers_removebg.png' %}" alt="clipper-img">
+            </div>
+        </div>
+
+        <div class="about__product">
+            <div class="description">
+                <br>
+                <h3 class="description-h3">
+                    Tavsif:
+                </h3>
+                <br>
+                <p class="description-p">
+                    Professional o'ymakorlik qayta zaryadlanuvchi elektr kesish mashinasi, titaniumli keramik to'sar boshini qabul qiladi, bardoshli, isitish oson emas, shovqinni pasaytiradi, yuqori kesish samaradorligi.
+                    Inson tanasi muhandislik dizayniga muvofiq, soddalashtirilgan tanani ushlab turing va qulay, ishlatish uchun qulay.
+                    Kuchli vosita, sochni silliqroq qirqish, qulayroq ishlaydi, sochlar yopish kabi muammolarni samarali oldini oladi.
+                    Past chastotali tebranish keraksiz shovqinni samarali ravishda kamaytiradi va jim va qulay.
+                    T-chiziq va 0 tish tirgaklari, tasvir dizaynini o'yib olish yoki barchasini aniqlashtirish, osongina ko'p variantli soch turmagini yaratish.
+                </p>
+                <br>
+                <h3 class="description-tech">
+                   Texnik tavsifi:
+                </h3>
+                <br>
+                <p class="description-tech-p">
+                </p>
+            </div>
+        </div>
+        <br>
+
+        <h2 class="order-h2">
+            Buyurtma qilish
+        </h2>
+        <br>
+        <div class="form">
+            <form action="{% url 'main' %}" method="post">
+                {% csrf_token %}
+                {{ form }}
+
+                <!-- <label for="fname" class="fname">Ismingizni kiriting:</label>
+                <input type="text" id="fname" name="fname" class="fname-place" placeholder="Ismingizni kiriting:">
+                <br>
+                <br>
+                <label for="telnumber" class="tel">Telefon raqamingizni kiritng:</label>
+                <input type="tel" id="telnumber" name="tel" placeholder="    +998 99 123 45 67">
+                <br>
+                <br> -->
+                <button class="button" type="submit">Buyurtma</button>
+            </form> 
+        </div>
+        <br><br>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a13b0b3619.js" crossorigin="anonymous"></script>
+    <script src="{% static 'main/script.js' %}"></script>
+</body>
+</html>

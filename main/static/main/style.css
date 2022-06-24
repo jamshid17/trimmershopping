@@ -45,7 +45,7 @@ body .scroll-top i {
 
 nav {
   width: 100%;
-  height: 50px;
+  height: 60px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -320,7 +320,7 @@ h2 {
   padding-right: 10px;
 }
 
-form .button {
+form .submit {
   width: 300px;
   height: 40px;
   font-size: 18px;
@@ -333,15 +333,114 @@ form .button {
   margin: 0 auto;
 }
 
-.form form .button:active {
+.form form .submit:active {
   background-color: #867a63;
   transition: 0.2s;
 }
 
-.form form .button:hover {
+.form form .submit:hover {
   background-color: #867a63;
   transition: 0.2s;
 }
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.pop-up-succes {
+  position: absolute;
+  left: calc((100%)/2 - 25vw);
+  width: 50vw;
+  height: 200px;
+  background-color: white;
+  border-radius: 20px;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.pop-up-succes .exit-btn {
+  position: absolute;
+  top: -15px;
+  right: -15PX;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.pop-up-succes .exit-btn img {
+  width: 100%;
+}
+
+.pop-up-succes .succes__img {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.pop-up-succes .succes__img img {
+  width: 100%;
+}
+
+.pop-up-succes .succes-text {
+  color: black;
+  text-align: center;
+  font-size: 25px;
+}
+
+.pop-up-succes button {
+  width: 100px;
+}
+
+.pop-up-fail {
+  display: none;
+  position: absolute;
+  left: calc((100%)/2 - 25vw);
+  width: 50vw;
+  height: 200px;
+  background-color: white;
+  border-radius: 20px;
+  position: relative;
+  bottom: 10px;
+}
+
+.pop-up-fail .exit-btn {
+  position: absolute;
+  top: -15px;
+  right: -15PX;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.pop-up-fail .exit-btn img {
+  width: 100%;
+}
+
+.pop-up-fail .fail__img {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.pop-up-fail .fail__img img {
+  width: 100%;
+}
+
+.pop-up-fail .fail-text {
+  color: black;
+  text-align: center;
+  font-size: 25px;
+}
+
+.pop-up-fail button {
+  width: 100px;
+}
+
 
 @media screen and (max-width: 480px) {
   nav .navbar {
@@ -364,5 +463,13 @@ form .button {
   }
   .about__product {
     width: 90%;
+  }
+  .pop-up-succes {
+    width: 75vw;
+    left: calc((100%/2) - 36vw);
+  }
+  .pop-up-fail {
+    width: 75vw;
+    left: calc((100%/2) - 36vw);
   }
 }

@@ -14,11 +14,17 @@ let scrollToTop =document.querySelector('.scroll-top'),
     fName = document.querySelector('.fname'),
     tel = document.querySelector('.tel'),
     fNamePlace = document.querySelector('.fname-place'),
-    submit_btn = document.querySelector('.button'),
-    price = document.querySelector('.price');
+    submitBtn = document.querySelector('.submit'),
+    price = document.querySelector('.price'),
+    succesText = document.querySelector('.succes-text'),
+    failText = document.querySelector('.fail-text'),
+    exitBtn = document.querySelector('.exit-btn'),
+    popUpSucces = document.querySelector('.pop-up-succes'),
+    popUpFail = document.querySelector('.pop-up-fail');
 
 
-console.log("other text");
+
+console.log(popUpSucces);
     
 
 scrollToTop.addEventListener('click', () => {
@@ -79,7 +85,7 @@ let rus = () => {
     1 шт. щетка для чистки
     `;
     orderH2.textContent = 'Заказать';
-    submit_btn.innerHTML = 'Заказать';
+    submitBtn.innerHTML = 'Заказать';
     price.textContent = "Цена: 299 000 сум";
 };
 
@@ -119,19 +125,28 @@ let uzb = () => {
     Batareya: 1200mAh 18500 lityum batareya (qo'shilmagan)
     <br>
     <br>
-    <h3>
-    Paketga quyidagilar kiradi:
-    </h3>
-    <br>         
-    1 dona soch kesish mashinasi
-    <br>                
-    1 dona batareya zaryadlovchi
-    <br>
-    3 dona qo'llanma taroqlari
-    <br>
-    1 dona tozalash cho'tkasi
     `;
     orderH2.textContent = 'Buyurtma qilish';
-    submit_btn.innerHTML = 'Buyurtma berish';
+    submitBtn.innerHTML = 'Buyurtma berish';
     price.textContent = "Narxi: 299 000 so'm";
 };
+
+
+// submitBtn.addEventListener('click', function(){
+//     popUpSucces.classList.remove('hide');
+//     popUpSucces.classList.add('show');
+// })
+
+exitBtn.addEventListener('click', function(e) {
+    popUpSucces.classList.remove('show')
+    popUpSucces.classList.add('hide');
+})
+
+// await sleep(1);
+
+if (popUpSucces != null){
+    console.log("scrolling");
+    window.scrollTo(0, document.body.scrollHeight);
+    // document.location.reload(true);
+
+}

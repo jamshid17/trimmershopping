@@ -38,7 +38,7 @@ scrollToTop.addEventListener('click', () => {
 
 
 let rus = () => {
-    instagram.textContent = "Инстаграм";
+    instagram.textContent = "Фейсбук";
     telegram.textContent = "Телеграм";
     aboutProduct.textContent = " О продукте";
     descriptionH3.textContent = "Описание";
@@ -91,7 +91,7 @@ let rus = () => {
 
 
 let uzb = () => {
-    instagram.textContent = "Instagram";
+    instagram.textContent = "Facebook";
     telegram.textContent = "Telegram";
     aboutProduct.textContent = "Mahsulot haqida";
     descriptionH3.textContent = "Tavsif";
